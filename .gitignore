@@ -1,0 +1,7 @@
+/.settings/
+.svn
+.actionScriptProperties
+.flexLibProperties
+.project
+Thumbs.db
+.DS_Store
