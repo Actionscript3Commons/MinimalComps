@@ -29,11 +29,13 @@
  
 package com.bit101.components
 {
+	import com.bobjim.components.Container;
+	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.events.Event;
 
-	public class HBox extends Component
+	public class HBox extends Container
 	{
 		private var _spacing:Number = 5;
 		
@@ -70,14 +72,21 @@ package com.bit101.components
 		 */
 		override public function draw() : void
 		{
+			var maxHeight:Number = 0;
 			var xpos:Number = 0;
+			
 			for(var i:int = 0; i < numChildren; i++)
 			{
 				var child:DisplayObject = getChildAt(i);
 				child.x = xpos;
 				xpos += child.width;
 				xpos += _spacing;
+				
+				maxHeight = Math.max( maxHeight, child.height );
 			}
+			
+			width = xpos;
+			height = maxHeight;
 		}
 		
 		/**
