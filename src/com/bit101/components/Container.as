@@ -1,7 +1,5 @@
-package com.bobjim.components
+package com.bit101.components
 {
-	import com.bit101.components.Component;
-	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.events.Event;

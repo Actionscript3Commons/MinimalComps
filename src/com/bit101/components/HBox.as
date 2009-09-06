@@ -29,8 +29,6 @@
  
 package com.bit101.components
 {
-	import com.bobjim.components.Container;
-	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.events.Event;
