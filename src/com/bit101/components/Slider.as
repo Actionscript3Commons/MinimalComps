@@ -305,6 +305,7 @@ package com.bit101.components
 			return _backClick;
 		}
 		
+		[Bindable( "change" )]
 		/**
 		 * Sets / gets the current value of this slider.
 		 */

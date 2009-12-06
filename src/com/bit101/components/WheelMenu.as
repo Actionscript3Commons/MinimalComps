@@ -62,7 +62,7 @@ package com.bit101.components
 		 * @parem innerRadius The radius of the inner circle at the center of the menu.
 		 * @param defaultHandler The event handling function to handle the default event for this component (select in this case).
 		 */
-		public function WheelMenu(parent:DisplayObjectContainer, numButtons:int, outerRadius:Number = 80, iconRadius:Number = 60, innerRadius:Number = 10, defaultHandler:Function = null)
+		public function WheelMenu(parent:DisplayObjectContainer = null, numButtons:int = 1, outerRadius:Number = 80, iconRadius:Number = 60, innerRadius:Number = 10, defaultHandler:Function = null)
 		{
 			_numButtons = numButtons;
 			_outerRadius = outerRadius;
@@ -120,7 +120,10 @@ package com.bit101.components
 		public function hide():void
 		{
 			visible = false;
-			stage.removeEventListener(MouseEvent.MOUSE_UP, onStageMouseUp);
+			if (stage)
+			{
+				stage.removeEventListener(MouseEvent.MOUSE_UP, onStageMouseUp);
+			}
 		}
 		
 		/**

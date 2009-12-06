@@ -3,8 +3,8 @@ package com.bit101.components
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.events.Event;
-
-	[DefaultProperty( "children" )]
+	
+	[DefaultProperty("children")]
 	public class Container extends Component
 	{
 		private var _children:Array;
@@ -18,9 +18,9 @@ package com.bit101.components
 			return _children;
 		}
 		
-		public function set children( value:Array ):void
+		public function set children(value:Array):void
 		{
-			if ( _children != value )
+			if (_children != value)
 			{
 				_children = value;
 				childrenChanged = true;
@@ -28,23 +28,23 @@ package com.bit101.components
 			}
 		}
 		
-		public function Container(parent:DisplayObjectContainer = null, xpos:Number = 0, ypos:Number =  0)
+		public function Container(parent:DisplayObjectContainer = null, xpos:Number = 0, ypos:Number = 0)
 		{
 			super(parent, xpos, ypos);
 		}
 		
-		override protected function onInvalidate(event:Event) : void
+		override protected function onInvalidate(event:Event):void
 		{
-			if ( childrenChanged )
+			if (childrenChanged)
 			{
-				while ( numChildren > 0 )
+				while (numChildren > 0)
 				{
-					removeChildAt( 0 );
+					removeChildAt(0);
 				}
 				
-				for each ( var child:DisplayObject in children )
+				for each (var child:DisplayObject in children)
 				{
-					addChild( child );
+					addChild(child);
 				}
 				
 				childrenChanged = false;

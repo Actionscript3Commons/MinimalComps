@@ -162,6 +162,7 @@ package com.bit101.components
 		// getter/setters
 		///////////////////////////////////
 		
+		[Bindable( "change" )]
 		/**
 		 * Sets / gets the current value of this slider.
 		 */

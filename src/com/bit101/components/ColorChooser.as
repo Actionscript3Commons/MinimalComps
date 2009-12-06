@@ -160,6 +160,7 @@ package com.bit101.components
 		// getter/setters
 		///////////////////////////////////
 		
+		[Bindable( "change" )]
 		/**
 		 * Gets / sets the color value of this ColorChooser.
 		 */

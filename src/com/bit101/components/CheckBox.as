@@ -156,6 +156,7 @@ package com.bit101.components
 			return _labelText;
 		}
 		
+		[Bindable( "change" )]
 		/**
 		 * Sets / gets the selected state of this CheckBox.
 		 */

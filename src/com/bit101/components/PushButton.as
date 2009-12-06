@@ -211,6 +211,9 @@ package com.bit101.components
 			return _labelText;
 		}
 		
+		
+		[Bindable( "change" )]
+	
 		public function set selected(value:Boolean):void
 		{
 			if(!_toggle)

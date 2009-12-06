@@ -83,7 +83,7 @@ package com.bit101.components
 				ypos += child.height;
 				ypos += _spacing;
 				
-				maxWidth = Math.max( maxWidth, child.height );
+				maxWidth = Math.max( maxWidth, child.width );
 			}
 			
 			width = maxWidth;
